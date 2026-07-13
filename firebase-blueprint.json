@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "UserBackupState": {
+      "title": "User Backup State",
+      "description": "Tracks the overall user sync state and metadata",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "User identifier UID"
+        },
+        "updatedAt": {
+          "type": "number",
+          "description": "Epoch timestamp of the last synchronization"
+        }
+      },
+      "required": ["userId", "updatedAt"]
+    },
+    "ImageItemEntity": {
+      "title": "Image Item",
+      "description": "An individual image item with its quantity and metadata",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique image item ID"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title or description of the image"
+        },
+        "url": {
+          "type": "string",
+          "description": "Image source URL or data URL"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "Current counted quantity"
+        },
+        "createdAt": {
+          "type": "number",
+          "description": "Epoch timestamp of creation"
+        },
+        "updatedAt": {
+          "type": "number",
+          "description": "Epoch timestamp of last update"
+        }
+      },
+      "required": ["id", "title", "url", "quantity", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/user_backups/{userId}": {
+      "schema": "UserBackupState",
+      "description": "Main user backup document mapping"
+    },
+    "/user_backups/{userId}/images/{imageId}": {
+      "schema": "ImageItemEntity",
+      "description": "Individual image records stored inside a subcollection under the user"
+    }
+  }
+}
