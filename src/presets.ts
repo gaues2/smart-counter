@@ -12,7 +12,7 @@ export interface PresetItem {
 export const PRESET_ITEMS: PresetItem[] = [
   {
     title: "حاسوب محمول ذكي",
-    url: "https://images.unsplash.com/photo-1496181130204-755241524eab?auto=format&fit=crop&w=500&q=80",
+    url: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80",
     category: "إلكترونيات"
   },
   {

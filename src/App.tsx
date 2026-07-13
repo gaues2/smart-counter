@@ -45,7 +45,7 @@ const DEFAULT_ITEMS: ImageItem[] = [
   {
     id: 'sample-laptop',
     title: 'حاسوب محمول ذكي',
-    url: 'https://images.unsplash.com/photo-1496181130204-755241524eab?auto=format&fit=crop&w=500&q=80',
+    url: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80',
     quantity: 1,
     createdAt: Date.now() - 3600000 * 24 * 3, // 3 days ago
     updatedAt: Date.now() - 3600000 * 24 * 3
